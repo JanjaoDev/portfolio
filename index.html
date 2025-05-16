@@ -120,24 +120,33 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
-  
-  @media (max-width: 600px) {
-  .profile-pic {
-    width: 80px;
-    height: 80px;
+
+/* ขยายขนาดตัวหนังสือบนมือถือ */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;  /* เพิ่มจากปกติประมาณ 16px */
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, li {
+    font-size: 16px;
   }
 
   .section-box {
-    max-width: 100%;
+    width: 90%; /* ให้กล่องเต็มพื้นที่เกือบเต็มจอมือถือ */
+    max-width: none; /* ปิด max-width เดิม */
   }
 
-  .section-wrapper {
-    flex-direction: column;  /* ✅ เรียงแนวตั้งบนมือถือ */
-    align-items: center;
+  .bot-card {
+    width: 90%; /* ให้บอทการ์ดเต็มความกว้าง */
+    margin: auto; /* จัดกลาง */
   }
 }
 
