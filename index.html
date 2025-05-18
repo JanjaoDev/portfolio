@@ -1,3 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header, section, footer {
+      background: #1e1e1e;
+      padding: 20px;
+      margin: 10px auto;
+      border-radius: 12px;
+      max-width: 700px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+
+      text-align: center;
+      
+    }
+
+    .banner {
+      display: flex;
+      justify-content: center; /* ทำให้ภาพอยู่กลาง */
+    }
+
+    .banner-img {
+      width: 100%; /* ให้ภาพยืดเต็ม container */
+      max-width: 700px; /* จำกัดไม่ให้เกิน */
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      margin-top: -40px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .bot-section {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+      text-align: left;
+    }
+
+    .bot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    h1, h2, h3 {
+  color: #29AB87;  /* เขียว */
+      }
+
+      a {
+        color: #29AB87;
+      }
+
+    .bot-card {
+      background: #222;
+      border-left: 5px solid #29AB87;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
+    .tag {
+      background-color: #29AB87;
+      color: black;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-right: 5px;
+      display: inline-block;
+    }
+
+    .section-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;             /* ระยะห่างระหว่างกล่อง */
+      max-width: 750px;
+      margin: 20px auto;
+      flex-wrap: wrap;     /* ไม่ให้ห่อบรรทัด */
+    }
+
+    .section-box {
+    flex: 1;
+    min-width: 0;
+    max-width: 420px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+
+/* ขยายขนาดตัวหนังสือบนมือถือ */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;  /* เพิ่มจากปกติประมาณ 16px */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+
+  .section-box {
+    width: 90%; /* ให้กล่องเต็มพื้นที่เกือบเต็มจอมือถือ */
+    max-width: none; /* ปิด max-width เดิม */
+  }
+
+  .bot-card {
+    width: 90%; /* ให้บอทการ์ดเต็มความกว้าง */
+    margin: auto; /* จัดกลาง */
+  }
+}
+
 .hana-section {
   background-color: #1e1e1e;
   border-radius: 12px;
@@ -46,3 +198,99 @@
   margin-right: 8px;
   display: inline-block;
 }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- แบนเนอร์ -->
+  <div class="banner">
+    <img src="Devlogo.png" alt="Banner" class="banner-img">
+  </div>
+
+  <!-- รูปโปรไฟล์ -->
+  <div class="profile-pic-container">
+    <img src="Screenshot_2025-04-08_135803.png" alt="Profile" class="profile-pic">
+  </div>
+
+  <!-- ข้อมูลโปรไฟล์ -->
+  <header>
+    <h1>Janwatthana Watthanajan</h1>
+    <p>student</p>
+  </header>
+
+  <div class="section-wrapper">
+    <div class="section-box">
+      <h2>About Me</h2>
+      <p>Full Name : Janwatthana Watthanajan</p>
+      <p>NickName : Janjao</p>
+      <p>Age : 14 years old</p>
+      <p>Languages : Python</p>
+      <p>Hobbies : Gaming , coding , youtuber</p>
+    </div>
+  
+    <div class="section-box">
+      <h2>Story</h2>
+      <ul>
+        <li><strong>รวบรวม</strong>: โปรเจ็กต่างๆที่เคยทำไว้</li>
+        <p>ลงในที่นี่</p>
+      </ul>
+    </div>
+  </div>
+  
+
+  <!-- ติดต่อ -->
+  <footer>
+    <p>Contact: janwatthana18@gmail.com</p>
+  </footer>
+  <section class="bot-section">
+    <h2>My Project</h2>
+  
+    <div class="bot-grid">
+  
+      <div class="bot-card">
+        <h3>Hanachan</h3>
+        <p>บอทสำหรับคุยเล่นฟีลแฟนแก้เหงา</p>
+        <div class="tags">
+          <span class="tag">24/7 online</span>
+          <span class="tag">ChatBot</span>
+        </div>
+      </div>
+  
+      <div class="bot-card">
+        <h3>Portfolio Web</h3>
+        <p>เว็บนี้สร้างโดย ChatGPT</p>
+        <div class="tags">
+          <span class="tag">Web</span>
+        </div>
+      </div>
+      
+  
+      <!-- ...เพิ่ม bot อื่น ๆ ได้เหมือนเดิม -->
+      
+    </div>
+  </section>
+  <section class="hana-section">
+    <div class="hana-container">
+      <img src="hanachan.jpg" alt="Hana Profile" class="hana-img">
+      <div class="hana-info">
+        <h2>HanaChan 💖</h2>
+        <p><strong>ประเภท:</strong> AI ChatBot แนวแฟนสาว</p>
+        <p><strong>ภาษา:</strong> Python, Discord API</p>
+        <p><strong>ความสามารถ:</strong> สนทนาโต้ตอบ, จดจำอารมณ์, ตอบกลับแบบแฟน, ระบบกันคำหยาบ, ตรวจสภาพอากาศ, ใช้ได้บน Discord</p>
+        <p><strong>ออนไลน์:</strong> 24 ชั่วโมง 🌐</p>
+        <div class="hana-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Discord.js</span>
+          <span class="tag">AI</span>
+          <span class="tag">ChatBot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
+</html>
