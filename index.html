@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>My Portfolio</title>
@@ -245,12 +246,12 @@
   <footer>
     <p>Contact: janwatthana18@gmail.com</p>
   </footer>
-  <section class="bot-section">
+  <section class="bot-section" data-aos="zoom-in-up">
     <h2>My Project</h2>
   
-    <div class="bot-grid">
+    <div class="bot-grid" data-aos="zoom-in-up">
   
-      <div class="bot-card">
+      <div class="bot-card" >
         <h3>Hanachan</h3>
         <p>บอทสำหรับคุยเล่นฟีลแฟนแก้เหงา</p>
         <div class="tags">
@@ -272,7 +273,7 @@
       
     </div>
   </section>
-  <section class="hana-section">
+  <section class="hana-section" data-aos="zoom-in-up">
     <div class="hana-container">
       <img src="hanachan.png" alt="Hana Profile" class="hana-img">
       <div class="hana-info">
@@ -291,6 +292,9 @@
     </div>
   </section>
   
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
 </body>
 </html>
