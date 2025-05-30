@@ -376,19 +376,10 @@
     const toggleBtn = document.getElementById("toggleTheme");
 
     toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("light-theme");
-
-      if (document.body.classList.contains("light-theme")) {
-        toggleBtn.textContent = "เปลี่ยนเป็นธีมมืด";
-      } else {
-        toggleBtn.textContent = "เปลี่ยนเป็นธีมสว่าง";
-      }
+      const isLight = document.body.classList.toggle("light-theme");
+      toggleBtn.textContent = isLight ? "เปลี่ยนเป็นธีมมืด" : "เปลี่ยนเป็นธีมสว่าง";
     });
 
-
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
-  });
   </script>
 
   <div style="height: 100vh;"></div> <!-- เพิ่มความสูงเพื่อให้ scroll ได้ -->
