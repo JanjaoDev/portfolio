@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="discord_badge.png" type="image/png">
+  <link rel="icon" href="Discord_Active_Developer_Badge.png" type="image/png">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <style>
+
+      #toggleTheme {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #29AB87;
+          color: white;
+          border: none;
+          border-radius: 999px;
+          padding: 10px 20px;
+          font-size: 14px;
+          cursor: pointer;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+          transition: background-color 0.3s ease;
+        }
+
+          #toggleTheme:hover {
+            background-color: #1e8e6a;
+        }
+
     body {
       background: linear-gradient(to bottom,
         #1e1e1e 0%,
@@ -24,6 +44,12 @@
         color: #f0f0f0;
         margin: 0;
         padding: 20px;
+      }
+
+      /* ธีมสว่าง */
+      body.light-theme {
+        background: linear-gradient(to bottom, #ffffff, #b0ffe1);
+        color: #121212;
       }
 
 
@@ -219,6 +245,8 @@
   </style>
 </head>
 <body>
+  
+  <button id="toggleTheme">เปลี่ยนธีม</button>
 
   <!-- แบนเนอร์ -->
   <div class="banner">
@@ -305,7 +333,15 @@
       </div>
     </div>
   </section>
-  
+  <script>
+
+  const toggleBtn = document.getElementById("toggleTheme");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+  });
+  </script>
+
   <div style="height: 100vh;"></div> <!-- เพิ่มความสูงเพื่อให้ scroll ได้ -->
 
   <section data-aos="fade-up" style="height: 200px; background: teal; text-align:center;">
@@ -315,6 +351,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
   AOS.init();
+  
 </script>
 </body>
 </html>
