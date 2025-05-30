@@ -7,8 +7,46 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <style>
+      /* อนิเมชั่นเปลี่ยนธีม */
+        body, header, section, .section-box, .bot-card, .hana-section {
+          transition: background-color 0.5s ease, color 0.5s ease;
+        }
 
-      #toggleTheme {
+        /* ส่วนที่มีพื้นหลังเข้มในธีมปกติ จะถูกเปลี่ยนใน light-theme */
+        body.light-theme header,
+        body.light-theme section,
+        body.light-theme .section-box,
+        body.light-theme .bot-card,
+        body.light-theme .hana-section {
+          background-color: #ffffff;
+          color: #121212;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-theme .bot-card {
+          border-left: 5px solid #00a36c;
+        }
+
+        body.light-theme .hana-img {
+          border-color: #00a36c;
+        }
+
+        body.light-theme .tag {
+          background-color: #00c58e;
+          color: black;
+        }
+
+        /* เปลี่ยนสีลิงก์ตอนธีมสว่าง */
+        body.light-theme a {
+          color: #008060;
+        }
+
+        body.light-theme h1,
+        body.light-theme h2,
+        body.light-theme h3 {
+          color: #008060;
+        }
+              #toggleTheme {
           position: fixed;
           bottom: 20px;
           right: 20px;
@@ -245,7 +283,7 @@
   </style>
 </head>
 <body>
-  
+
   <button id="toggleTheme">เปลี่ยนธีม</button>
 
   <!-- แบนเนอร์ -->
@@ -335,7 +373,18 @@
   </section>
   <script>
 
-  const toggleBtn = document.getElementById("toggleTheme");
+    const toggleBtn = document.getElementById("toggleTheme");
+
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+
+      if (document.body.classList.contains("light-theme")) {
+        toggleBtn.textContent = "เปลี่ยนเป็นธีมมืด";
+      } else {
+        toggleBtn.textContent = "เปลี่ยนเป็นธีมสว่าง";
+      }
+    });
+
 
   toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-theme");
