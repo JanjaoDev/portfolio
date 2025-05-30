@@ -8,7 +8,7 @@
   <title>My Portfolio</title>
   <style>
       /* อนิเมชั่นเปลี่ยนธีม */
-        body, header, section, .section-box, .bot-card, .hana-section {
+        body, header, section, .section-box, .bot-card, .hana-section .profile-pic, .hana-info, .hana-tags .tag, .bot-section{
           transition: background-color 0.5s ease, color 0.5s ease;
         }
 
@@ -35,7 +35,26 @@
           background-color: #00c58e;
           color: black;
         }
+        body.light-theme .profile-pic {
+          border: 5px solid #00a36c;
+        }
 
+        body.light-theme .hana-info {
+          color: #121212;
+        }
+
+        body.light-theme .hana-section {
+          background-color: #ffffff;
+        }
+
+        body.light-theme .hana-tags .tag {
+          background-color: #00c58e;
+          color: #000;
+        }
+
+        body.light-theme .bot-section {
+          background-color: #ffffff;
+        }
         /* เปลี่ยนสีลิงก์ตอนธีมสว่าง */
         body.light-theme a {
           color: #008060;
